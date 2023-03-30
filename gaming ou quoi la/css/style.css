@@ -1,11 +1,12 @@
 
-
+   
 
 @font-face { 
   font-family: 'kanit';
   src: url('font/kanit-bold.woff') format('woff')
   url('font/kanit-bold.woff2') format('woff2')
 }
+@import url(https://fr.allfont.net/allfont.css?fonts=a_grotictitulshhv);
 
 html,body {
   height: 100vh;
@@ -20,17 +21,74 @@ body {
 
 }
 
-nav {
-  text-transform: uppercase ;
+.navbar {
+  background-color: #181818;
+  color: #fff;
+  height: 80px;
   display: flex;
-  align-items:center ;
   justify-content: center;
-  font-family: Helvetica, sans-serif;
-  background-color:rgb(0, 0, 0);
-  
-  color: white;
-  
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
+
+/* Style pour le conteneur de la barre de navigation */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+/* Style pour le logo dans la barre de navigation */
+.navbar-logo img {
+  max-height: 50px;
+}
+
+/* Style pour les liens dans la barre de navigation */
+.navbar-links ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style pour les liens dans la barre de navigation au survol */
+.navbar-links ul li:hover {
+  border-bottom: 3px solid #fff;
+}
+
+/* Style pour les liens dans la barre de navigation */
+.navbar-links ul li a {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 20px;
+  text-decoration: none;
+}
+
+/* Style pour le lien "Connexion" dans la barre de navigation */
+.navbar-links ul li:last-child a {
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+/* Style pour le lien "Connexion" dans la barre de navigation au survol */
+.navbar-links ul li:last-child a:hover {
+  background-color: #fff;
+  color: #181818;
+  transition: background-color 0.2s ease-out;
+}
+
+
 
 
 svg {
@@ -40,8 +98,8 @@ svg {
 
 ul {
   font-size: 25px;
-  padding: 40px;
-  margin: 20px;
+  padding: 100px;
+  margin: 100px;
   list-style: none;
   display: flex;
   align-items: center;
@@ -63,22 +121,45 @@ ul {
 .hero {
   text-align: center;
   margin: 0px;
+}
+  
+h1 {
+    margin: 100px;
+    text-transform: uppercase;
+    padding-top: 80px;
+    line-height: 1;
+    font-size:calc(9000vw/1018); 
+}
+
+h2 {
+  font-family: 'a_GroticTitulShHv', arial;
+  margin-top: -100px;
+  text-transform: uppercase;
+  padding-top: 80px;
+  line-height: 1;
+  font-size:calc(9000vw/1018); 
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+  justify-items: center;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 
   
- h1 {
-    margin: 0;
-    text-transform: uppercase;
-    padding: 0;
-    line-height: 1;
-    font-size:calc(9000vw/1018);
-  }
+ 
   
     
-    &:last-child {
-      color : transparent;
-
-      -webkit-text-stroke: calc(300vw/745)
-    }    
+   
   
 
 
